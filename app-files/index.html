@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-viso-geral">
+        <li class="text">Visão Geral</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-viso-geral---shield">
+        <li class="text">Visão geral - Shield</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-cmara-de-escavao">
+        <li class="text">Câmara de escavação</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-gantry-51f---01">
+        <li class="text">Gantry 5/1F - 01</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-gantry-51f---02">
+        <li class="text">Gantry 5/1F - 02</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-gantry-41f---01">
+        <li class="text">Gantry 4/1F - 01</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-gantry-41f---02">
+        <li class="text">Gantry 4/1F - 02</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-gantry-31f---01">
+        <li class="text">Gantry 3/1F - 01</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-gantry-31f---02">
+        <li class="text">Gantry 3/1F - 02</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-gantry-21f---01">
+        <li class="text">Gantry 2/1F - 01</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-gantry-21f---02">
+        <li class="text">Gantry 2/1F - 02</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-gantry-11f---01">
+        <li class="text">Gantry 1/1F - 01</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-gantry-11f---02">
+        <li class="text">Gantry 1/1F - 02</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-gantry-52f---direita-1">
+        <li class="text">Gantry 5/2F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-gantry-52f---direita-2">
+        <li class="text">Gantry 5/2F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-gantry-42f---direita-1">
+        <li class="text">Gantry 4/2F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-gantry-42f---direita-2">
+        <li class="text">Gantry 4/2F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-gantry-32f---direita-1">
+        <li class="text">Gantry 3/2F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-gantry-32f---direita-2">
+        <li class="text">Gantry 3/2F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-gantry-22f---direita-1">
+        <li class="text">Gantry 2/2F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-gantry-22f---direita-2">
+        <li class="text">Gantry 2/2F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-gantry-52f---esquerda-1">
+        <li class="text">Gantry 5/2F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-sala-mdica">
+        <li class="text">Sala médica</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-gantry-52f---esquerda-2">
+        <li class="text">Gantry 5/2F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-gantry-42f---esquerda-1">
+        <li class="text">Gantry 4/2F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-gantry-42f---esquerda-2">
+        <li class="text">Gantry 4/2F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-refeitrio">
+        <li class="text">Refeitório</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="27-gantry-32f---esquerda-1">
+        <li class="text">Gantry 3/2F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="28-gantry-32f---esquerda-2">
+        <li class="text">Gantry 3/2F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="29-gantry-22f---esquerda-1">
+        <li class="text">Gantry 2/2F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="30-gantry-22f---esquerda-2">
+        <li class="text">Gantry 2/2F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="31-gantry-12f---direita-1">
+        <li class="text">Gantry 1/2F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="32-gantry-12f---central-1">
+        <li class="text">Gantry 1/2F - Central 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="33-gantry-12f---esquerda-1">
+        <li class="text">Gantry 1/2F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="34-gantry-12f---direita-2">
+        <li class="text">Gantry 1/2F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="35-gantry-12f---direita-3">
+        <li class="text">Gantry 1/2F - Direita 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="36-gantry-12f---direita-4">
+        <li class="text">Gantry 1/2F - Direita 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="37-gantry-12f---esquerda-2">
+        <li class="text">Gantry 1/2F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="38-gantry-12f---esquerda-3">
+        <li class="text">Gantry 1/2F - Esquerda 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="39-gantry-12f---esquerda-4">
+        <li class="text">Gantry 1/2F - Esquerda 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="40-gantry-53f---direita-1">
+        <li class="text">Gantry 5/3F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="41-gantry-53f---direita-2">
+        <li class="text">Gantry 5/3F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="42-gantry-43f---direita-1">
+        <li class="text">Gantry 4/3F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="43-gantry-43f---direita-2">
+        <li class="text">Gantry 4/3F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="44-gantry-33f---direita-1">
+        <li class="text">Gantry 3/3F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="45-oficina-gantry-4">
+        <li class="text">Oficina Gantry 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="46-cmara-de-resgate----1">
+        <li class="text">Câmara de resgate  - 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="47-cmara-de-resgate---2">
+        <li class="text">Câmara de resgate - 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="48-gantry-33f---direita-2">
+        <li class="text">Gantry 3/3F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="49-gantry-2-33f---central">
+        <li class="text">Gantry 2-3/3F - Central</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="50-gantry-2-3f---central-1">
+        <li class="text">Gantry 2-3F - Central 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="51-inversor-de-frequncia">
+        <li class="text">Inversor de Frequência</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="52-gantry-2-3f---central-1">
+        <li class="text">Gantry 2-3F - Central 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="53-gantry-1-23f---central">
+        <li class="text">Gantry 1-2/3F - Central</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="54-oficina-gantry-1">
+        <li class="text">Oficina Gantry 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="55-gantry-13f---direita-1">
+        <li class="text">Gantry 1/3F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="56-cabine-de-comando">
+        <li class="text">Cabine de comando</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="57-gantry-13f---direita-2">
+        <li class="text">Gantry 1/3F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="58-gantry-13f---direita-3">
+        <li class="text">Gantry 1/3F - Direita 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="59-gantry-13f---rea-frontal-central">
+        <li class="text">Gantry 1/3F - Área frontal central</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="60-gantry-53f---esquerda-1">
+        <li class="text">Gantry 5/3F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="61-gantry-53f---esquerda-2">
+        <li class="text">Gantry 5/3F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="62-gantry-43f---esquerda-1">
+        <li class="text">Gantry 4/3F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="63-gantry-43f---esquerda-2">
+        <li class="text">Gantry 4/3F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="64-escada-gantry-4">
+        <li class="text">Escada Gantry 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="65-gantry-33f---esquerda-1">
+        <li class="text">Gantry 3/3F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="66-gantry-33f-esquerda-2">
+        <li class="text">Gantry 3/3F Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="67-gantry-23f---esquerda-1">
+        <li class="text">Gantry 2/3F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="68-gantry-13f---esquerda-1">
+        <li class="text">Gantry 1/3F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="69-gantry-13f---esquerda-2">
+        <li class="text">Gantry 1/3F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="70-gantry-13f---esquerda-3">
+        <li class="text">Gantry 1/3F - Esquerda 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="71-shield-1f---central">
+        <li class="text">Shield 1F - Central</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="72-shield-1f---central-2">
+        <li class="text">Shield 1F - Central 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="73-shield-1f---direita">
+        <li class="text">Shield 1F - Direita</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="74-shield-1f---esquerda">
+        <li class="text">Shield 1F - Esquerda</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="75-shield-2f---direita-1">
+        <li class="text">Shield 2F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="76-shield-2f---direita-2">
+        <li class="text">Shield 2F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="77-shield-2f---direita-3">
+        <li class="text">Shield 2F - Direita 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="78-shield-2f---esquerda-1">
+        <li class="text">Shield 2F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="79-shield-2f---esquerda-2">
+        <li class="text">Shield 2F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="80-shield-3f---esquerda-1">
+        <li class="text">Shield 3F - Esquerda 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="81-shield-3f---esquerda-2">
+        <li class="text">Shield 3F - Esquerda 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="82-shield-3f---esquerda-3">
+        <li class="text">Shield 3F - Esquerda 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="83-shield-3f---central-1">
+        <li class="text">Shield 3F - Central 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="84-eretor-1">
+        <li class="text">Eretor 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="85-eretor-2">
+        <li class="text">Eretor 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="86-eretor-3">
+        <li class="text">Eretor 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="87-eretor-4">
+        <li class="text">Eretor 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="88-eretor-5">
+        <li class="text">Eretor 5</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="89-eretor-6">
+        <li class="text">Eretor 6</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="90-eretor-7">
+        <li class="text">Eretor 7</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="91-shield-3f---direita-1">
+        <li class="text">Shield 3F - Direita 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="92-shield-3f---direita-2">
+        <li class="text">Shield 3F - Direita 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="93-shield-3f---direita-3">
+        <li class="text">Shield 3F - Direita 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="94-shield-3f---direita-4">
+        <li class="text">Shield 3F - Direita 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="95-shield-4f---direita">
+        <li class="text">Shield 4F - Direita</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="96-shield-4f---central">
+        <li class="text">Shield 4F - Central</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="97-shield-4f---esquerda">
+        <li class="text">Shield 4F - Esquerda</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="98-cmara-hiperbrica---auxiliar">
+        <li class="text">Câmara hiperbárica - Auxiliar</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="99-cmara-hiperbrica---principal">
+        <li class="text">Câmara hiperbárica - Principal</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="100-working-chamber---man-lock">
+        <li class="text">Working Chamber - Man lock</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="101-working-chamber---central">
+        <li class="text">Working Chamber - Central</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="102-working-chamber---material-lock">
+        <li class="text">Working Chamber - Material lock</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
